@@ -4,7 +4,7 @@ public class HonorTile extends Tile {
     public HonorTile(String suit) {
         super(suit);
         this.suit = suit;
-        rank = "";
+        rank = "0";
     }
 
     public boolean lessThanEquals(Tile otherTile) {
@@ -16,18 +16,14 @@ public class HonorTile extends Tile {
     }
 
     public boolean lessThan(Tile otherTile) {
-        return greaterThan(otherTile);
+        return false;
     }
 
     public boolean greaterThan(Tile otherTile) {
-        int result = otherTile.getSuit().compareTo(otherTile.getSuit());
-        if (result == 0) {
-            int rankResult = getRank().compareTo(otherTile.getRank());
-            if (rankResult == 1) return true;
-            else return false;
-        }
-        else if (result == 1)
-            return true;
-        else return false;
+       return false;
+    }
+
+    public boolean simple() {
+        return false;
     }
 }

@@ -7,17 +7,18 @@
  */
 public class SuitTile extends Tile{
     public SuitTile(String suit, String rank) {
-        super(suit + " " + rank);
+        super(rank + " " + suit);
         this.rank = rank;
-        this.suit = name;
+        this.suit = suit;
     }
     
     public boolean lessThanEquals(Tile otherTile) {
-        return equals(otherTile) ||   lessThan(otherTile);
+
+        return equals(otherTile) ||   !greaterThan(otherTile);
     }
 
     public boolean greaterThanEquals(Tile otherTile) {
-        return equals(otherTile) ||   lessThan(otherTile);
+        return equals(otherTile) ||   greaterThan(otherTile);
     }
     
     public boolean lessThan(Tile otherTile) {
@@ -25,14 +26,15 @@ public class SuitTile extends Tile{
     }
 
     public boolean greaterThan(Tile otherTile) {
-        int result = otherTile.getSuit().compareTo(otherTile.getSuit());
-        if (result == 0) {
-            int rankResult = getRank().compareTo(otherTile.getRank());
-            if (rankResult == 1) return true;
-            else return false;
+        int result = getSuit().compareTo(otherTile.getSuit());
+        if (result > 0) {
+             return true;
         }
-        else if (result == 1)
-            return true;
-        else return false;
+        else if (result == 0) {
+          int rankResult = getRank().compareTo(otherTile.getRank());
+          if (rankResult > 0) return true;
+        }
+        return false;
     }
+
 }

@@ -1,0 +1,3 @@
+This is a java implementation of Japanese Mahjong rules that closely follow these specs:
+http://www.itmaybeahack.com/homepage/books/python/html/p05/p05c05_mahjongg.html. Planning to
+extend it to suit my needs.

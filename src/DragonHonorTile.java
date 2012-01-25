@@ -5,5 +5,10 @@
  * Time: 9:43 AM
  * To change this template use File | Settings | File Templates.
  */
-public class DragonHonorTile {
+public class DragonHonorTile extends HonorTile{
+    public DragonHonorTile(String name) {
+        super(name);
+    }
+
+    public boolean dragon() { return true;}
 }

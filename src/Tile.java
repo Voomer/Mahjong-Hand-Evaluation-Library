@@ -1,5 +1,5 @@
 
-public class Tile {
+public class Tile  {
 
     protected String suit;
     protected String  rank;
@@ -27,7 +27,20 @@ public class Tile {
         return rank;
     }
 
+    public boolean simple () {
+        return true;
+    }
 
+    public boolean honor () {
+        return false;
+    }
 
+    public boolean dragon() {
+        return false;
+    }
+
+    public boolean wind() {
+        return false;
+    }
 
 }
