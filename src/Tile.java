@@ -1,0 +1,33 @@
+
+public class Tile {
+
+    protected String suit;
+    protected String  rank;
+    protected String name;
+
+    public Tile(String name)
+    {
+        this.name = name.trim();
+    }
+    
+    public String getSuit()
+    {
+        return suit;
+    }
+    
+    public boolean equals(Tile tile) {
+        return getName().equals(tile.getName());
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+    public String getRank() {
+        return rank;
+    }
+
+
+
+
+}
